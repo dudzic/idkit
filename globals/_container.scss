@@ -1,0 +1,51 @@
+@mixin container($type: "normal") {
+	@if $type == "normal" {
+		width: 85%;
+		margin: 0 auto;
+
+		@media screen and (min-width: 768px) {
+			width: 100%;
+			padding: 0 75px;
+			margin: 0 auto;
+		}
+
+		@media screen and (min-width: 1024px) {
+			width: 100%;
+			padding: 0 100px;
+			margin: 0 auto;
+			max-width: 1600px;
+		}
+	} @else if $type == "thin" {
+		width: 85%;
+		margin: 0 auto;
+		max-width: 960px;
+
+		@media screen and (min-width: 768px) {
+			width: 100%;
+			padding: 0 75px;
+			margin: 0 auto;
+		}
+
+		@media screen and (min-width: 1024px) {
+			width: 100%;
+			padding: 0 100px;
+			margin: 0 auto;
+			max-width: 960px;
+		}
+	} @else if $type == "full" {
+		width: 85%;
+		margin: 0 auto;
+	}
+}
+
+.container {
+	@include container();
+}
+
+.container--full {
+	@include container("full");
+}
+
+.container--thin {
+	@include container("thin");
+}

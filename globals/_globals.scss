@@ -1,0 +1,7 @@
+@import "./variables";
+@import "./container";
+
+* {
+	box-sizing: border-box;
+	font-family: $mainFont;
+}
