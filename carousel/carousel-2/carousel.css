@@ -106,6 +106,7 @@
 .carousel-navigation-box ul a {
   font-size: 1.563rem;
   font-family: sans-serif;
+  cursor: pointer;
 }
 
 .carousel-grid {
